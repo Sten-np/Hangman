@@ -1,16 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.github.sten.np.hangman;
-
+import java.util.Scanner;
 /**
  *
- * @author steen
+ * @author sten
  */
 public class Hangman {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Type a word: \n");
+        String word = scan.nextLine();
+        
+        Word wordObj = new Word(word);
+        
+        System.out.println("Guess a letter: \n");
+        String letter = scan.nextLine();
+
+        wordObj.checkLetter(letter);
     }
 }
